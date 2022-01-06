@@ -40,7 +40,7 @@ urlpatterns = [
     
     #Clients
     path('clients/', clientsList.as_view()),
-    path('clients-auth/', include('rest_framework.urls', namespace='rest_framework4')),
+    path('clients/', include('rest_framework.urls', namespace='rest_framework4')),
     path('clients/create/', createClient.as_view(), name='createclient'),
     path('clients/edit/clientdetail/<int:pk>/', adminClientDetail.as_view(), name='adminclientdetail'),
     path('clients/edit/<int:pk>/', editClient.as_view(), name='editclient'),

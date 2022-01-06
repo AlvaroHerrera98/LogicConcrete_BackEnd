@@ -76,7 +76,7 @@ class deleteMixtures(generics.RetrieveDestroyAPIView):
     queryset= Mixtures.objects.all()
 
 
-class adminMixturesDetail(generics.RetrieveAPIView):
+class adminMixturesDetail( generics.RetrieveAPIView):
     permission_classes = [DjangoModelPermissions]
     serializer_class = mixturesSerializer
     queryset= Mixtures.objects.all()
@@ -89,7 +89,7 @@ class rolsList (generics.ListCreateAPIView):
     serializer_class = rolsSerializer
     queryset= Rols.objects.all()
 
-class rolsDetails(generics.RetrieveAPIView):
+class rolsDetails( generics.RetrieveAPIView):
     serializer_class = rolsSerializer
     
     def get_object(self, queryset=None, **kwargs):
@@ -160,7 +160,7 @@ class deleteClient(generics.RetrieveDestroyAPIView):
     serializer_class = clientsSerializer
     queryset= Clients.objects.all()
 
-class adminClientDetail(generics.RetrieveAPIView):
+class adminClientDetail( generics.RetrieveAPIView):
     permission_classes = [DjangoModelPermissions]
     serializer_class = clientsSerializer
     queryset= Clients.objects.all()
